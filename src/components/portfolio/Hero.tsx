@@ -32,25 +32,32 @@ export function Hero() {
         transition={{ duration: 0.7 }}
         className="flex-1 text-center md:text-left"
       >
-        <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-muted-foreground">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
-          Open to SDE & AI internships
-        </span>
-        <h1 className="mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
-          Hi, I'm <span className="text-gradient">{profile.name}</span>
-        </h1>
-        <p className="mt-4 text-xl text-muted-foreground sm:text-2xl">
-          <span className="font-mono text-foreground">{typed}</span>
-          <span className="caret" />
-        </p>
-        <p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground md:mx-0">
-          Computer Science Engineering student at Sri Krishna Institute of Technology, Bengaluru — building practical software at the intersection of Generative AI and full-stack development.
-        </p>
+       <span className="inline-flex items-center gap-2 rounded-full glass px-3 py-1 text-xs text-muted-foreground">
+  <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+  Open to SDE & AI internships
+</span>
+
+<h1 className="mt-6 font-display text-4xl font-bold leading-tight sm:text-5xl md:text-6xl">
+  Hi, I'm <span className="text-gradient">{profile.name}</span>
+</h1>
+
+<p className="mt-4 text-xl text-muted-foreground sm:text-2xl">
+  <span className="font-mono text-foreground">{typed}</span>
+  <span className="caret" />
+</p>
+
+<p className="mx-auto mt-5 max-w-xl text-base text-muted-foreground md:mx-0">
+  Computer Science Engineering student at Sri Krishna Institute of Technology, Bengaluru —
+  passionate about building AI-powered products, modern full-stack applications,
+  and scalable software that solves real-world problems.
+</p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-3 md:justify-start">
-          <a href={profile.resume} download className="inline-flex items-center gap-2 rounded-xl btn-primary px-5 py-2.5 text-sm font-medium">
+          <a 
+          href={profile.resume} download className="inline-flex items-center gap-2 rounded-xl btn-primary px-5 py-2.5 text-sm font-medium">
             <Download className="h-4 w-4" /> Resume
           </a>
-          <a href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl btn-outline-glass px-5 py-2.5 text-sm font-medium">
+          <a 
+          href={profile.github} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl btn-outline-glass px-5 py-2.5 text-sm font-medium">
             <Github className="h-4 w-4" /> GitHub
           </a>
           <a href={profile.linkedin} target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-xl btn-outline-glass px-5 py-2.5 text-sm font-medium">

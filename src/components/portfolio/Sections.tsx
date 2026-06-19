@@ -17,14 +17,7 @@ const skillIcons: Record<string, React.ComponentType<{ className?: string }>> = 
 export function About() {
   return (
     <Section id="about" eyebrow="01 — About" title="About me">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="mx-auto max-w-3xl rounded-2xl glass p-8 text-center text-lg leading-relaxed text-muted-foreground"
-      >
-        <p>
+<div className="mx-auto max-w-3xl rounded-2xl glass p-8 text-center text-lg text-foreground">        <p>
           I'm a Computer Science and Engineering student from India who loves turning ideas into working software. My focus areas are
           <span className="text-foreground"> Artificial Intelligence, Generative AI, and Full-Stack Development</span>.
         </p>
@@ -32,7 +25,7 @@ export function About() {
           I believe great engineers are built on three habits — <span className="text-foreground">curiosity, consistency, and clean problem solving</span>.
           I'm constantly shipping side projects, exploring new frameworks, and preparing for software engineering and AI roles where I can grow alongside a strong team.
         </p>
-      </motion.div>
+      </div>
     </Section>
   );
 }
@@ -97,8 +90,7 @@ export function Projects() {
                 height={640}
                 className="aspect-[16/10] w-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/30 to-transparent" />
-            </div>
+<div className="absolute inset-0 dark:bg-gradient-to-t dark:from-background dark:via-background/20 dark:to-transparent"></div>            </div>
             <div className="p-6">
               <h3 className="font-display text-xl font-semibold">{p.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{p.description}</p>
@@ -297,3 +289,19 @@ export function Footer() {
 }
 
 export const _icons = { Briefcase }; // keep tree-shake happy
+export function Sections() {
+  return (
+    <>
+      <About />
+            <Skills />
+            <Projects />
+            <Experience />
+            <Education />
+            <Certifications />
+            <Achievements />
+            <Contact />
+            <Footer />
+    </>
+  );
+}
+
